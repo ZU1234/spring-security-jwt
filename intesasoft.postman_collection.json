@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "eb42cd6c-0af8-4b29-a110-34e17da85615",
+		"name": "intesasoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24265031"
+	},
+	"item": [
+		{
+			"name": "localhost:8888/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Test User\",\r\n  \"email\": \"test@test.com\",\r\n  \"password\": \"12345678\",\r\n  \"role\":\"ADMIN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8888/register"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8888/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\": \"test@test.com\",\r\n  \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8888/login"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8888/user/me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QuY29tIiwiaWF0IjoxNjc2MjU1Mjc0LCJleHAiOjE2NzYyNTYxNzR9.h8EkzJKs7P40IIJDVnqDMH1hPOEu6W4qLXDGhytjq9I"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "localhost:8888/user/me"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8888/user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QuY29tIiwiaWF0IjoxNjc2MjU1Mjc0LCJleHAiOjE2NzYyNTYxNzR9.h8EkzJKs7P40IIJDVnqDMH1hPOEu6W4qLXDGhytjq9I"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8888/user"
+			},
+			"response": []
+		}
+	]
+}
